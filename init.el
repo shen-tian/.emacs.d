@@ -143,4 +143,14 @@
  '(global-linum-mode t)
  '(package-selected-packages
    (quote
-    (magit-annex tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider))))
+    (magit-annex
+     tagedit
+     smex
+     rainbow-delimiters
+     projectile
+     paredit
+     magit
+     ido-ubiquitous
+     exec-path-from-shell
+     clojure-mode-extra-font-locking
+     cider))))
