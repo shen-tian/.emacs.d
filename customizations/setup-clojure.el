@@ -12,6 +12,8 @@
 ;; Enable rainbow delimiters for Clojure.
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
 
+(add-hook 'clojure-mode-hook 'fci-mode)
+
 ;; A little more syntax highlighting
 (require 'clojure-mode-extra-font-locking)
 
