@@ -158,6 +158,9 @@
    `(clojure-java-call ((,class (:foreground ,purple))))
 
    ;; Rainbow-delimiters
+   ;; Edited as thus: each depth advances 40 deg in HSL space. Saturation
+   ;; at 75. L alternated between 75 and 50 to make successive colours
+   ;; more distinct. Depth 9 is odd one out... but :P 
    `(rainbow-delimiters-depth-1-face ((,class (:foreground ,"#ef8f8f"))))
    `(rainbow-delimiters-depth-2-face ((,class (:foreground ,"#df9f20"))))
    `(rainbow-delimiters-depth-3-face ((,class (:foreground ,"#cfef8f"))))
