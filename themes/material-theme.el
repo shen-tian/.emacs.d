@@ -140,7 +140,7 @@
    `(clojure-test-failure-face ((,class (:background nil :inherit flymake-warnline))))
    `(clojure-test-error-face ((,class (:background nil :inherit flymake-errline))))
    `(clojure-test-success-face ((,class (:background nil :foreground nil :underline ,green))))
-   ;;`(Clojure-keyword-face ((,class (:inherit font-lock-builtin-face))))
+   ;;`(clojure-keyword-face ((,class (:inherit font-lock-builtin-face))))
 
    ;; EDTS errors
    `(edts-face-warning-line ((t (:background nil :inherit flymake-warnline))))
