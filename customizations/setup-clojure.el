@@ -37,7 +37,9 @@
 ;; provides minibuffer documentation for the code you're typing into the repl
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 
+;; open cider in the current window (i.e. don't open a new one)
 ;; go right to the REPL buffer when it's finished connecting
+(setq cider-repl-display-in-current-window t)
 (setq cider-repl-pop-to-buffer-on-connect t)
 
 ;; When there's a cider error, show its buffer and switch to it
