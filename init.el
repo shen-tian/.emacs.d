@@ -33,18 +33,19 @@
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
 (defvar my-packages
-  '(paredit
-    clojure-mode
-    clojure-mode-extra-font-locking
-    cider
-    markdown-mode
-    fill-column-indicator
-    ido-ubiquitous
-    smex
-    projectile
-    rainbow-delimiters
-    tagedit
-    magit))
+  '(
+    ;; General Emacs
+    ido-ubiquitous smex fill-column-indicator
+   
+    ;; Project management
+    projectile magit
+        
+    ;; Lispy stuff
+    paredit clojure-mode clojure-mode-extra-font-locking cider rainbow-delimiters
+    
+    ;; Other modes
+    markdown-mode tagedit rainbow-mode company
+    ))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -87,6 +88,9 @@
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
 (load "shell-integration.el")
+
+;; Custom key bindings
+(load "keys.el")
 
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
