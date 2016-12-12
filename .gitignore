@@ -12,3 +12,5 @@ elpa
 eshell
 games
 
+# ignore local settings
+custom.el

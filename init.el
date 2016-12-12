@@ -1,4 +1,12 @@
 ;;;;
+;; Custom file
+;;;;
+
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+
+;;;;
 ;; Packages
 ;;;;
 
@@ -25,47 +33,17 @@
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
 (defvar my-packages
-  '(;; makes handling lisp expressions much, much easier
-    ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
-    paredit
-
-    ;; key bindings and code colorization for Clojure
-    ;; https://github.com/clojure-emacs/clojure-mode
+  '(paredit
     clojure-mode
-
-    ;; extra syntax highlighting for clojure
     clojure-mode-extra-font-locking
-
-    ;; integration with a Clojure REPL
-    ;; https://github.com/clojure-emacs/cider
     cider
-
-    ;; Markdown mode
     markdown-mode
-
-    ;; Fill column indicator
     fill-column-indicator
-
-    ;; allow ido usage in as many contexts as possible. see
-    ;; customizations/navigation.el line 23 for a description
-    ;; of ido
     ido-ubiquitous
-
-    ;; Enhances M-x to allow easier execution of commands. Provides
-    ;; a filterable list of possible commands in the minibuffer
-    ;; http://www.emacswiki.org/emacs/Smex
     smex
-
-    ;; project navigation
     projectile
-
-    ;; colorful parenthesis matching
     rainbow-delimiters
-
-    ;; edit html tags like sexps
-    ;;tagedit
-
-    ;; git integration
+    tagedit
     magit))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -131,19 +109,5 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(coffee-tab-width 2)
- '(global-linum-mode t)
- '(package-selected-packages
-   (quote
-    (clojure-mode fill-column-indicator markdown-mode smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(when (file-exists-p custom-file)
+  (load custom-file))
