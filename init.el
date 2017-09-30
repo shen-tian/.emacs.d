@@ -35,16 +35,16 @@
 (defvar my-packages
   '(
     ;; General Emacs
-    ido-ubiquitous smex fill-column-indicator
+    ido-completing-read+ smex fill-column-indicator
    
     ;; Project management
     projectile magit
         
     ;; Lispy stuff
-    paredit clojure-mode clojure-mode-extra-font-locking cider rainbow-delimiters
+    paredit clojure-mode clojure-mode-extra-font-locking clj-refactor cider rainbow-delimiters
     
     ;; Other modes
-    markdown-mode tagedit rainbow-mode company
+    markdown-mode rainbow-mode company
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user

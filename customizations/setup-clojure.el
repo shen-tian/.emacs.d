@@ -30,14 +30,18 @@
                ("(\\(background?\\)"
                 (1 font-lock-keyword-face))))
             (define-clojure-indent (fact 1))
-            (define-clojure-indent (facts 1))))
+            (define-clojure-indent (facts 1))
+            (clj-refactor-mode 1)
+            (yas-minor-mode 1) ; for adding require/use/import statements
+            ;; This choice of keybinding leaves cider-macroexpand-1 unbound
+            (cljr-add-keybindings-with-prefix "C-c C-m")))
 
 ;;;;
 ;; Cider
 ;;;;
 
 ;; provides minibuffer documentation for the code you're typing into the repl
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+;; (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 
 ;; open cider in the current window (i.e. don't open a new one)
 ;; go right to the REPL buffer when it's finished connecting
