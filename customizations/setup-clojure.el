@@ -61,6 +61,12 @@
 ;; enable paredit in your REPL
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
 
+;; allow cider to work correctly with cljs
+(setq cider-cljs-lein-repl
+      "(do (require 'figwheel-sidecar.repl-api)
+           (figwheel-sidecar.repl-api/start-figwheel!)
+           (figwheel-sidecar.repl-api/cljs-repl))")
+
 ;; Use clojure mode for other extensions
 ;; Removed cljs from here, as that seems to use clojurescript-mode
 (add-to-list 'auto-mode-alist '("\\.edn$" . clojure-mode))
