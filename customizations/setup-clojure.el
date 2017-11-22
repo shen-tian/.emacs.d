@@ -36,6 +36,18 @@
             ;; This choice of keybinding leaves cider-macroexpand-1 unbound
             (cljr-add-keybindings-with-prefix "C-c C-m")))
 
+;; Workaround for this bug:
+;; https://github.com/clojure-emacs/refactor-nrepl/issues/204
+
+(defun cljr-clean-ns ()
+  "Clean the ns form for the current buffer.
+See: https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-clean-ns"
+  (interactive)
+  (cljr--ensure-op-supported "clean-ns")
+  ;;(cider-eval-ns-form :sync)
+  (cider-eval-ns-form)
+  (cljr--clean-ns))
+
 ;;;;
 ;; Cider
 ;;;;
