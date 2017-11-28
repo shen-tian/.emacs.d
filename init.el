@@ -36,15 +36,15 @@
   '(
     ;; General Emacs
     ido-completing-read+ smex fill-column-indicator
-   
+
     ;; Project management
     projectile magit
-        
+
     ;; Lispy stuff
     paredit clojure-mode clojure-mode-extra-font-locking clj-refactor cider rainbow-delimiters
-    
+
     ;; Other modes
-    markdown-mode rainbow-mode company
+    js2-mode haskell-mode markdown-mode rainbow-mode company
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -71,7 +71,7 @@
 ;;
 ;; (require 'yaml-mode)
 ;; (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-;; 
+;;
 ;; Adding this code will make Emacs enter yaml mode whenever you open
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
