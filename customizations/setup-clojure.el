@@ -14,7 +14,18 @@
 ;; Enable rainbow delimiters for Clojure.
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
+;; Enable fill colum indicator for Clojure
 (add-hook 'clojure-mode-hook 'fci-mode)
+
+;; Hack for company-mode interaction
+;; https://github.com/alpaker/Fill-Column-Indicator/issues/54
+(defun on-off-fci-before-company (command)
+  (when (string= "show" command)
+    (turn-off-fci-mode))
+  (when (string= "hide" command)
+    (turn-on-fci-mode)))
+
+(advice-add 'company-call-frontends :before #'on-off-fci-before-company)
 
 ;; A little more syntax highlighting
 (require 'clojure-mode-extra-font-locking)
