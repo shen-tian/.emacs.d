@@ -81,17 +81,17 @@
    `(font-lock-constant-face ((,class (:foreground ,green))))
    `(font-lock-doc-face ((,class (:foreground "moccasin"))))
    `(font-lock-doc-string-face ((,class (:foreground ,yellow))))
-   `(font-lock-function-name-face ((,class (:foreground ,"#84ffff"))))
+   `(font-lock-function-name-face ((,class (:foreground ,"#4dd0e1"))))
    `(font-lock-keyword-face ((,class (:foreground ,yellow))))
    `(font-lock-negation-char-face ((,class (:foreground ,blue))))
    `(font-lock-preprocessor-face ((,class (:foreground "gold"))))
    `(font-lock-regexp-grouping-backslash ((,class (:foreground ,yellow))))
    `(font-lock-regexp-grouping-construct ((,class (:foreground ,purple))))
-   `(font-lock-string-face ((,class (:foreground "#9ccc65"))))
-   `(font-lock-type-face ((,class (:foreground "#84ffff"))))
+   `(font-lock-string-face ((,class (:foreground "#3fbf7f"))))
+   `(font-lock-type-face ((,class (:foreground "#4dd0e1"))))
    `(font-lock-variable-name-face ((,class (:foreground ,"#ffcc80"))))
    `(font-lock-warning-face ((,class (:weight bold :foreground ,red))))
-   `(highlight-numbers-number ((,class (:foreground ,"#9ccc65"))))
+   `(highlight-numbers-number ((,class (:foreground ,"#3fbf7f"))))
    `(shadow ((,class (:foreground ,comment))))
    `(success ((,class (:foreground "SeaGreen2"))))
    `(error ((,class (:foreground ,red))))
@@ -161,7 +161,7 @@
    ;; Rainbow-delimiters
    ;; Edited as thus: each depth advances 40 deg in HSL space. Saturation
    ;; at 75. L alternated between 75 and 50 to make successive colours
-   ;; more distinct. Depth 9 is odd one out... but :P 
+   ;; more distinct. Depth 9 is odd one out... but :P
    `(rainbow-delimiters-depth-1-face ((,class (:foreground ,"#ef8f8f"))))
    `(rainbow-delimiters-depth-2-face ((,class (:foreground ,"#df9f20"))))
    `(rainbow-delimiters-depth-3-face ((,class (:foreground ,"#cfef8f"))))
