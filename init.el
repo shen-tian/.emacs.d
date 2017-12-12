@@ -100,6 +100,9 @@
 ;; some user interface elements
 (load "ui.el")
 
+;; FiraCode related
+(load "firacode.el")
+
 ;; These customizations make editing a bit nicer.
 (load "editing.el")
 

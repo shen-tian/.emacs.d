@@ -7,3 +7,5 @@ Started with Clojure for the Brave one. Changes:
 * Updated packages
 * Changed theme to `material`
 * Added `markdown-mode`
+
+Uses Fira Code and Fira Code Symbols
