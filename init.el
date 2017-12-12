@@ -100,7 +100,7 @@
 ;; some user interface elements
 (load "ui.el")
 
-;; FiraCode related
+;; Fira Code font and ligatures
 (load "firacode.el")
 
 ;; These customizations make editing a bit nicer.
@@ -112,9 +112,12 @@
 ;; For editing lisps
 (load "elisp-editing.el")
 
-;; Langauage-specific
+;; Clojure
 (load "setup-clojure.el")
+
+;; Javascript
 (load "setup-js.el")
 
+;; Custom file
 (when (file-exists-p custom-file)
   (load custom-file))
