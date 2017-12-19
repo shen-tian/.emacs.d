@@ -27,6 +27,9 @@
 (add-to-list 'load-path "~/.emacs.d/themes")
 (load-theme 'material t)
 
+;; Fira Mono font
+(set-default-font "Fira Mono")
+
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 140)
 

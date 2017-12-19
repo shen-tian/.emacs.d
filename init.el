@@ -101,7 +101,7 @@
 (load "ui.el")
 
 ;; Fira Code font and ligatures
-(load "firacode.el")
+;;(load "firacode.el")
 
 ;; These customizations make editing a bit nicer.
 (load "editing.el")
