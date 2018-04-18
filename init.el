@@ -43,6 +43,9 @@
     ;; Lispy stuff
     paredit clojure-mode clojure-mode-extra-font-locking clj-refactor cider rainbow-delimiters
 
+    ;;
+    platformio-mode
+
     ;; Other modes
     js2-mode haskell-mode markdown-mode rainbow-mode company
     ))
@@ -114,6 +117,9 @@
 
 ;; Clojure
 (load "setup-clojure.el")
+
+;; Platform IO
+(load "platform-io.el")
 
 ;; Javascript
 (load "setup-js.el")

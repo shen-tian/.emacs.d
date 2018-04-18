@@ -72,3 +72,17 @@
 
 ;; show column number
 (setq column-number-mode t)
+
+;; Platform colour fix, but probably broader?
+
+(add-hook 'eshell-preoutput-filter-functions
+           'ansi-color-filter-apply)
+
+(require 'ansi-color)
+
+(defun colorize-compilation-buffer ()
+  (toggle-read-only)
+  (ansi-color-apply-on-region compilation-filter-start (point))
+  (toggle-read-only))
+
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
