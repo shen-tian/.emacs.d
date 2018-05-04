@@ -11,6 +11,7 @@ backups
 elpa
 eshell
 games
+tramp
 
 # ignore local settings
 custom.el
