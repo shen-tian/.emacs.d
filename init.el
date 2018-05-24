@@ -13,10 +13,16 @@
 ;; Define package repositories
 (require 'package)
 
-(add-to-list 'package-archives
-             '("marmalade" . "https://marmalade-repo.org/packages/") t)
-(add-to-list 'package-archives
-            '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(setq package-archives
+      '(("GNU ELPA"     . "http://elpa.gnu.org/packages/")
+        ("MELPA Stable" . "https://stable.melpa.org/packages/")
+        ("marmalade"    . "https://marmalade-repo.org/packages/")
+        ("MELPA"        . "https://melpa.org/packages/"))
+      package-archive-priorities
+      '(("MELPA Stable" . 10)
+        ("marmalade"    . 8)
+        ("GNU ELPA"     . 5)
+        ("MELPA"        . 0)))
 
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
@@ -43,11 +49,14 @@
     ;; Lispy stuff
     paredit clojure-mode clojure-mode-extra-font-locking clj-refactor cider rainbow-delimiters
 
-    ;;
+    ;; Arduino stuff
     platformio-mode
 
+    ;; JavaScript stuff
+    js2-mode prettier-js
+
     ;; Other modes
-    js2-mode haskell-mode markdown-mode rainbow-mode company
+    haskell-mode markdown-mode rainbow-mode company
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user

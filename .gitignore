@@ -15,3 +15,5 @@ tramp
 
 # ignore local settings
 custom.el
+/.mc-lists.el
+/network-security.data

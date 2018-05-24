@@ -1,11 +1,13 @@
 # This is my emacs config.
 
-I'm not sure what I'm doing, but ¯\_(ツ)_/¯. Really an effort to understand emacs a bit more.
+Use with Emacs 25+
 
-Started with Clojure for the Brave one. Changes:
+Other dependencies:
 
-* Updated packages
-* Changed theme to `material`
-* Added `markdown-mode`
+Font
 
-Uses Fira Code and Fira Code Symbols
+ - `Fira Mono`
+
+npm stuff:
+
+ - `prettier` for prettier-js-mode
