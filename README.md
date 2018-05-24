@@ -1,6 +1,11 @@
 # This is my emacs config.
 
-Use with Emacs 25+
+Mostly tested with
+
+ - emacs-mac on macOS v26+
+ - vanilla emacs on Ubuntu v26+
+
+Since this my personal config, no need to support anything older.
 
 Other dependencies:
 
