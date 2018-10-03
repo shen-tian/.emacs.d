@@ -86,7 +86,3 @@
   (toggle-read-only))
 
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
-
-;; transparent for mac-port
-(when (symbolp 'mac-control-modifier)
-  (set-frame-parameter (selected-frame) 'alpha '(85 . 50)))
