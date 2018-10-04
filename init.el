@@ -39,7 +39,7 @@
 (defvar my-packages
   '(
     ;; General Emacs
-    ido-completing-read+ smex fill-column-indicator
+    helm fill-column-indicator
 
     ;; Project management
     projectile magit
