@@ -39,7 +39,7 @@
 (defvar my-packages
   '(
     ;; General Emacs
-    helm fill-column-indicator
+    helm helm-ag fill-column-indicator
 
     ;; Project management
     projectile magit

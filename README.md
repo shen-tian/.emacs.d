@@ -16,3 +16,7 @@ Font
 npm stuff:
 
  - `prettier` for prettier-js-mode
+
+Others, via Brew
+
+ - `the_silver_searcher`
