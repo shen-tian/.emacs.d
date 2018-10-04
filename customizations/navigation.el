@@ -21,9 +21,14 @@
 
 ;; Helm
 
+(require 'helm)
+(require 'helm-config)
+
 (global-set-key (kbd "M-x") #'helm-M-x)
 (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
+
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 
 (setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
       helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
@@ -34,7 +39,7 @@
 
 (setq helm-autoresize-max-height 1000)
 (setq helm-autoresize-min-height 20)
-(helm-autoresize-mode 1)
+(setq helm-ff-auto-update-initial-value t)
 (helm-mode 1)
 
 ;; projectile everywhere!
