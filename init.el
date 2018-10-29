@@ -39,7 +39,7 @@
 (defvar my-packages
   '(
     ;; General Emacs
-    ido-completing-read+ fill-column-indicator ivy swiper counsel
+    ido-completing-read+ fill-column-indicator ivy swiper counsel counsel-projectile
 
     ;; Project management
     projectile magit

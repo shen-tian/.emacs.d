@@ -52,6 +52,7 @@
 ;; Ivy rerlated stuff
 
 (ivy-mode 1)
+(counsel-projectile-mode 1)
 
 (setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d/%d) ")
