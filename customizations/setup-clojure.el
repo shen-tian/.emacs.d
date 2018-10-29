@@ -47,18 +47,6 @@
             ;; This choice of keybinding leaves cider-macroexpand-1 unbound
             (cljr-add-keybindings-with-prefix "C-c C-m")))
 
-;; Workaround for this bug:
-;; https://github.com/clojure-emacs/refactor-nrepl/issues/204
-
-(defun cljr-clean-ns ()
-  "Clean the ns form for the current buffer.
-See: https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-clean-ns"
-  (interactive)
-  (cljr--ensure-op-supported "clean-ns")
-  ;;(cider-eval-ns-form :sync)
-  (cider-eval-ns-form)
-  (cljr--clean-ns))
-
 ;;;;
 ;; Cider
 ;;;;
@@ -94,32 +82,4 @@ See: https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-clean-ns"
 ;; Removed cljs from here, as that seems to use clojurescript-mode
 (add-to-list 'auto-mode-alist '("\\.edn$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.boot$" . clojure-mode))
-;;(add-to-list 'auto-mode-alist '("\\.cljs.*$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("lein-env" . enh-ruby-mode))
-
-
-;; key bindings
-;; these help me out with the way I usually develop web apps
-(defun cider-start-http-server ()
-  (interactive)
-  (cider-load-current-buffer)
-  (let ((ns (cider-current-ns)))
-    (cider-repl-set-ns ns)
-    (cider-interactive-eval (format "(println '(def server (%s/start))) (println 'server)" ns))
-    (cider-interactive-eval (format "(def server (%s/start)) (println server)" ns))))
-
-
-(defun cider-refresh ()
-  (interactive)
-  (cider-interactive-eval (format "(user/reset)")))
-
-(defun cider-user-ns ()
-  (interactive)
-  (cider-repl-set-ns "user"))
-
-(eval-after-load 'cider
-  '(progn
-     (define-key clojure-mode-map (kbd "C-c C-v") 'cider-start-http-server)
-     (define-key clojure-mode-map (kbd "C-M-r") 'cider-refresh)
-     (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
-     (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
