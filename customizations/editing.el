@@ -18,6 +18,9 @@
 ;; Highlight current line
 (global-hl-line-mode 1)
 
+;; Auto revert
+(global-auto-revert-mode t)
+
 ;; Don't use hard tabs
 (setq-default indent-tabs-mode nil)
 
