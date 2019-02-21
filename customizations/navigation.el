@@ -65,4 +65,7 @@
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 
 ;; projectile everywhere!
-(projectile-global-mode)
+(require 'projectile)
+;; (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(projectile-mode +1)
