@@ -54,7 +54,7 @@
     js2-mode prettier-js
 
     ;; Other modes
-    haskell-mode markdown-mode rainbow-mode company
+    yaml-mode markdown-mode rainbow-mode company
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user

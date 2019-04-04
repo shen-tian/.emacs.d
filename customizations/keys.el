@@ -10,6 +10,10 @@
 (global-set-key (kbd "C-x e") 'split-window-right)
 (global-set-key (kbd "C-x p") 'delete-window)
 
+;; Magit. Why is this not default?
+
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; Related to emacs-mac port?
 
 ;; Check for the existence of a function with mac- prefix
