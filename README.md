@@ -13,6 +13,19 @@ Font
 
  - `Fira Mono`
 
+ ```
+ brew tap homebrew/cask-fonts
+ brew cast install font-fira-mono
+ ```
+
 npm stuff:
 
  - `prettier` for prettier-js-mode
+
+Other stuff
+
+Silver Searcher
+
+```
+brew install the_silver_searcher
+```
