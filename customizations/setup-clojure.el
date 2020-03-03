@@ -86,3 +86,9 @@
 (add-to-list 'auto-mode-alist '("\\.edn$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.boot$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("lein-env" . enh-ruby-mode))
+
+;; Flycheck
+(require 'flycheck-joker)
+
+;; clj-kondo
+(require 'flycheck-clj-kondo)

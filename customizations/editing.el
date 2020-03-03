@@ -66,3 +66,7 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
+;; flycheck
+
+(global-flycheck-mode)

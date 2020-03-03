@@ -39,13 +39,14 @@
 (defvar my-packages
   '(
     ;; General Emacs
-    ido-completing-read+ fill-column-indicator ivy swiper counsel counsel-projectile
+    ido-completing-read+ fill-column-indicator ivy swiper counsel counsel-projectile flycheck
 
     ;; Project management
     projectile magit
 
     ;; Lispy stuff
     paredit clojure-mode clojure-mode-extra-font-locking clj-refactor cider rainbow-delimiters
+    flycheck-joker flycheck-clj-kondo
 
     ;; Arduino stuff
     platformio-mode
