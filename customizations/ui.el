@@ -28,7 +28,7 @@
 (load-theme 'material t)
 
 ;; Fira Mono font
-(set-default-font "Fira Mono")
+(set-frame-font "Fira Mono")
 
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 140)
