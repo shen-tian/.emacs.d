@@ -2,7 +2,7 @@
 
 Mostly tested with
 
- - emacs-mac on macOS v26+
+ - emacs-mac on macOS v29+
  - vanilla emacs on Ubuntu v26+
 
 Since this my personal config, no need to support anything older.
@@ -14,8 +14,7 @@ Font
  - `Fira Mono`
 
  ```
- brew tap homebrew/cask-fonts
- brew cast install font-fira-mono
+ brew install --cask font-fira-mono
  ```
 
 npm stuff:

@@ -8,7 +8,7 @@
 ;;(menu-bar-mode -1)
 
 ;; Show line numbers
-(global-linum-mode)
+(global-display-line-numbers-mode)
 
 ;; Remove the graphical toolbar at the top.
 (when (fboundp 'tool-bar-mode)

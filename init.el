@@ -52,7 +52,7 @@
     platformio-mode
 
     ;; JavaScript stuff
-    js2-mode prettier-js
+    js2-mode prettier-js web-mode
 
     ;; Other modes
     yaml-mode markdown-mode rainbow-mode company
