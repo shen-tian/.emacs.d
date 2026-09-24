@@ -1,5 +1,5 @@
 ;; Changes all yes/no questions to y/n type
-(fset 'yes-or-no-p 'y-or-n-p)
+(setq use-short-answers t)
 
 ;; shell scripts
 (setq-default sh-basic-offset 2)
@@ -12,9 +12,11 @@
 (setq inhibit-startup-message t)
 
 ;; Make find-file more useful
-(defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)
-  "Create parent directory if not exists while visiting file."
+(defun make-directory-maybe (filename &rest _)
+  "Create parent directory if not exists while visiting FILENAME."
   (unless (file-exists-p filename)
     (let ((dir (file-name-directory filename)))
       (unless (file-exists-p dir)
         (make-directory dir t)))))
+
+(advice-add 'find-file :before #'make-directory-maybe)

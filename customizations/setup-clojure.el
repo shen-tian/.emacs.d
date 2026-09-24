@@ -14,18 +14,8 @@
 ;; Enable rainbow delimiters for Clojure.
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
-;; Enable fill colum indicator for Clojure
-(add-hook 'clojure-mode-hook 'fci-mode)
-
-;; Hack for company-mode interaction
-;; https://github.com/alpaker/Fill-Column-Indicator/issues/54
-(defun on-off-fci-before-company (command)
-  (when (string= "show" command)
-    (turn-off-fci-mode))
-  (when (string= "hide" command)
-    (turn-on-fci-mode)))
-
-(advice-add 'company-call-frontends :before #'on-off-fci-before-company)
+;; Enable fill column indicator for Clojure
+(add-hook 'clojure-mode-hook 'display-fill-column-indicator-mode)
 
 ;; A little more syntax highlighting
 (require 'clojure-mode-extra-font-locking)
@@ -83,9 +73,9 @@
 
 ;; Use clojure mode for other extensions
 ;; Removed cljs from here, as that seems to use clojurescript-mode
-(add-to-list 'auto-mode-alist '("\\.edn$" . clojure-mode))
-(add-to-list 'auto-mode-alist '("\\.boot$" . clojure-mode))
-(add-to-list 'auto-mode-alist '("lein-env" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.edn\\'" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
+(add-to-list 'auto-mode-alist '("lein-env\\'" . clojure-mode))
 
 ;; Flycheck
 (require 'flycheck-joker)

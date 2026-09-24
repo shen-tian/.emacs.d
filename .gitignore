@@ -12,6 +12,7 @@ elpa
 eshell
 games
 tramp
+transient
 
 # ignore local settings
 custom.el

@@ -1,5 +1,5 @@
 ;; javascript / html
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 ;;; Tab size of 2, to align with Prettier
 (add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 2)))
@@ -19,9 +19,6 @@
   (setq flycheck-check-syntax-automatically '(save mode-enabled))
   (eldoc-mode +1)
   (tide-hl-identifier-mode +1)
-  ;; company is an optional dependency. You have to
-  ;; install it separately via package-install
-  ;; `M-x package-install [ret] company`
   (company-mode +1))
 
 ;; aligns annotation to the right hand side

@@ -16,14 +16,14 @@
 
 ;; Related to emacs-mac port?
 
-;; Check for the existence of a function with mac- prefix
-(when (symbolp 'mac-control-modifier)
+;; Only on the emacs-mac port, which defines these variables
+(when (boundp 'mac-control-modifier)
   ;; Re-map modifiers
   (setq mac-control-modifier 'control
         mac-option-modifier 'meta
         mac-command-modifier 'super))
 
-(when (symbolp 'mac-control-modifier)
+(when (boundp 'mac-control-modifier)
 
   (cua-mode t)
 

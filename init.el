@@ -39,7 +39,7 @@
 (defvar my-packages
   '(
     ;; General Emacs
-    ido-completing-read+ fill-column-indicator ivy swiper counsel counsel-projectile flycheck
+    ivy swiper counsel counsel-projectile flycheck switch-window
 
     ;; Project management
     projectile magit
@@ -52,7 +52,7 @@
     platformio-mode
 
     ;; JavaScript stuff
-    js2-mode prettier-js web-mode
+    js2-mode prettier-js web-mode typescript-mode tide
 
     ;; Other modes
     yaml-mode markdown-mode rainbow-mode company

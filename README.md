@@ -11,10 +11,10 @@ Other dependencies:
 
 Font
 
- - `Fira Mono`
+ - `Fira Code`
 
  ```
- brew install --cask font-fira-mono
+ brew install --cask font-fira-code
  ```
 
 npm stuff:

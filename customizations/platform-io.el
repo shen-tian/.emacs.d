@@ -9,7 +9,7 @@
         (platformio-mode 1))
     (error nil)))
 
-;; Enable irony for all c++ files, and platformio-mode only
-;; when needed (platformio.ini present in project root).
+;; Enable platformio-mode for c++ files only when needed
+;; (platformio.ini present in project root).
 (add-hook 'c++-mode-hook (lambda ()
                            (platformio-conditionally-enable)))
