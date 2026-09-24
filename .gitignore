@@ -10,6 +10,7 @@ projectile-frecency.eld
 auto-save-list
 backups
 elpa
+eln-cache
 eshell
 games
 tramp

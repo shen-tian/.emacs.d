@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t -*-
 ;; (require 'platformio-mode)
 
 ;; This not in Melpa stable...

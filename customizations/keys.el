@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t -*-
 ;; Move these keys one row down.
 
 (global-unset-key (kbd "C-x 1"))

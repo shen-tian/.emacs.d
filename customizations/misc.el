@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t -*-
 ;; Changes all yes/no questions to y/n type
 (setq use-short-answers t)
 

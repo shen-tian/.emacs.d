@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t -*-
 ;; On macOS, an Emacs started from the GUI doesn't inherit the shell's
 ;; environment. Copy PATH etc. from the login shell.
 ;; https://github.com/purcell/exec-path-from-shell
