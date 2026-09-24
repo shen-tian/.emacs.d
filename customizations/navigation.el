@@ -27,7 +27,6 @@
 ;; switch-buffer, etc.)
 
 (ivy-mode 1)
-(counsel-projectile-mode 1)
 
 (setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d/%d) ")
@@ -40,7 +39,9 @@
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 
 ;; projectile everywhere!
-(require 'projectile)
-;; (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-(projectile-mode +1)
+(use-package projectile
+  :ensure t
+  :init (projectile-mode +1)
+  :bind-keymap ("C-c p" . projectile-command-map))
+
+(counsel-projectile-mode 1)

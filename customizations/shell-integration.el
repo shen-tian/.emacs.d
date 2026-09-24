@@ -1,6 +1,8 @@
-;; Sets up exec-path-from shell
+;; On macOS, an Emacs started from the GUI doesn't inherit the shell's
+;; environment. Copy PATH etc. from the login shell.
 ;; https://github.com/purcell/exec-path-from-shell
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize)
-  (exec-path-from-shell-copy-envs
-   '("PATH")))
+(use-package exec-path-from-shell
+  :ensure t
+  :if (memq window-system '(mac ns))
+  :config
+  (exec-path-from-shell-initialize))

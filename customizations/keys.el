@@ -12,7 +12,9 @@
 
 ;; Magit. Why is this not default?
 
-(global-set-key (kbd "C-x g") 'magit-status)
+(use-package magit
+  :ensure t
+  :bind ("C-x g" . magit-status))
 
 ;; Related to emacs-mac port?
 
