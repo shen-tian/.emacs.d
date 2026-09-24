@@ -61,11 +61,20 @@
 ;; No cursor blinking, it's distracting
 (blink-cursor-mode 0)
 
+;; Smooth trackpad scrolling
+(pixel-scroll-precision-mode 1)
+
+;; Show available key bindings after a prefix (e.g. C-c p, C-c C-m)
+(which-key-mode 1)
+
 ;; full path in title bar
 (setq-default frame-title-format "%b (%f)")
 
 ;; don't pop up font menu
 (global-set-key (kbd "s-t") #'ignore)
+
+;; no pinch-to-zoom on the trackpad
+(global-set-key [pinch] #'ignore)
 
 ;; no bell
 (setq ring-bell-function 'ignore)
